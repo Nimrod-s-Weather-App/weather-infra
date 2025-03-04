@@ -1,26 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: weather-infra
-  namespace: argocd
-spec:
-  project: weather-project
-  source:
-    repoURL: https://github.com/Nimrod-s-weather-app/weather-infra.git
-    targetRevision: master
-    path: k8s
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: weather-service
   namespace: argocd
 spec:
