@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Nimrod's-weather-app/weather-infra.git
+    repoURL: https://github.com/Nimrod-s-weather-app/weather-infra.git
     targetRevision: main
     path: k8s/kafka
   destination:
