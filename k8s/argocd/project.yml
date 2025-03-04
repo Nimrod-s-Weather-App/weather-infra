@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: weather-project
+  namespace: argocd
+spec:
+  description: Weather App Project with microservices and infrastructure
+  sourceRepos:
+    - https://github.com/Nimrod-s-weather-app/weather-service.git
+    - https://github.com/Nimrod-s-weather-app/weather-notifications-service.git
+    - https://github.com/Nimrod-s-weather-app/weather-infra.git
+  destinations:
+    - namespace: weather-app
+      server: https://kubernetes.default.svc
+    - namespace: weather-infra
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
