@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Nimrod-s-weather-app/weather-infra.git
     targetRevision: main
-    path: k8s/kafka
+    path: charts/kafka
   destination:
     server: https://kubernetes.default.svc
     namespace: weather-infra
