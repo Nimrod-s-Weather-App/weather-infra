@@ -1,0 +1,11 @@
+apiVersion: v2
+name: zookeeper
+description: A Helm chart for deploying Zookeeper
+version: 0.1.0
+appVersion: "3.7.0"  # Zookeeper version
+
+# Optional dependencies if you are using external dependencies
+# dependencies:
+#   - name: kafka
+#     version: "2.8.0"
+#     repository: "https://example.com/charts"

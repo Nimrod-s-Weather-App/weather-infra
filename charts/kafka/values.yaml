@@ -1,0 +1,15 @@
+replicaCount: 1  
+
+image:
+  repository: bitnami/kafka
+  tag: latest
+
+service:
+  name: kafka
+  port: 9092
+
+kafka:
+  brokerId: "1"
+  zookeeperConnect: "zookeeper:2181"
+  allowPlaintextListener: "yes"
+  advertisedListeners: "PLAINTEXT://kafka:9092"
