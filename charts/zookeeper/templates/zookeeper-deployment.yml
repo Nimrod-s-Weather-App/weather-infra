@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace : weather-infra
+  namespace: weather-infra  # Fixed the spacing here
   name: zookeeper
 spec:
   replicas: 1
@@ -21,6 +21,7 @@ spec:
           env:
             - name: ALLOW_ANONYMOUS_LOGIN
               value: "yes"
+
 ---
 apiVersion: v1
 kind: Service

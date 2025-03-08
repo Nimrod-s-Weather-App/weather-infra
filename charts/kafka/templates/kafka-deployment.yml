@@ -33,6 +33,7 @@ spec:
               value: "PLAINTEXT"
             - name: KAFKA_CFG_ADVERTISED_LISTENERS
               value: "PLAINTEXT://kafka.weather-infra.svc.cluster.local:9092"  # Internal DNS name for Kafka service
+              
 ---
 apiVersion: v1
 kind: Service
